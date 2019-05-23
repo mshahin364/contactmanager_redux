@@ -46,7 +46,7 @@ export const addContact = (contact) => async dispatch => {
 }
 
 export const updateContact = (contact) => async dispatch => {
-    const res = await Axios.put(`${baseUrl}/users`, contact);
+    const res = await Axios.put(`${baseUrl}/users/${contact.id}`, contact);
 
     dispatch({
         type: UPDATE_CONTACT,
